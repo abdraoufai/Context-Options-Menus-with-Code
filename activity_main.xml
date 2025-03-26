@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- شريط الأدوات (Toolbar) باللون الأسود مع زر ثلاث نقاط -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:title="SmartRate"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/PopupMenuStyle" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmartRate"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez la valeur"
+        android:inputType="numberDecimal"
+        android:digits="0123456789."
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
+        android:padding="10dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonDinarToEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinar vers Euro"
+            android:textColor="@android:color/black"
+            android:buttonTint="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEuroToDinar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euro vers Dinar"
+            android:textColor="@android:color/black"
+            android:buttonTint="@android:color/black" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/black"
+        android:onClick="convertir"
+        android:padding="8dp"
+        android:text="Convertir"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat: --"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="start"
+        android:paddingTop="16dp" />
+
+</LinearLayout>
