@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- النمط الأساسي للتطبيق -->
+    <style name="Theme.SmartRate" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <!-- تخصيص القائمة المنبثقة (ثلاث نقاط) -->
+    <style name="PopupMenuStyle" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+</resources>
